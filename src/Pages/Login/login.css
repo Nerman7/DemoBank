@@ -1,0 +1,39 @@
+.logoImg {
+  width: 250px;
+  height: 66.77px;
+}
+
+.centerPage {
+  height: 576px;
+  width: 40vh;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.loginPage {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100vh;
+  min-height: 100vh;
+  z-index: -1;
+}
+.loginInputs {
+  width: 100%;
+  height: 60px;
+  display: block;
+  margin-top: 16px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: #22306333;
+
+}
