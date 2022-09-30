@@ -44,6 +44,9 @@ export default function Login() {
     return errors;
   }
 
+    function changeColor(){
+      return 'red'
+    }
   return (
     <div className="loginPage">
       <video autoPlay loop muted playsInline width={100} className="myVideo">
@@ -79,7 +82,11 @@ export default function Login() {
             required
           ></input>
           <p>{formErrors.password}</p>
-          <Button />
+          <Button 
+            color='#1c64d2'
+           buttonStyle='btnLoginBlue'>Log in</Button>
+         
+          
         </form>
       </div>
     </div>
