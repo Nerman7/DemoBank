@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef  } from "react";
 import leonus from "../../assets/resources/img_leonus_logo.svg";
 import "./login.css";
 import Button from "../../components/login/Button";
@@ -8,41 +8,58 @@ import "../../assets/fonts/axiforma/axiforma-bold.otf";
 import "../../assets/fonts/axiforma/axiforma-regular.otf";
 
 export default function Login() {
-  const [formValues, setFormValues] = useState({ mail: "", password: "" });
+  const [mail, setMail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const [disabled, setDisabled] = useState(true)
+
+  useEffect(() => {
+    setDisabled(formValidation())
+  }, [mail, password]) 
+
+
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
-    console.log(formValues);
-  }
+  // function handleChange(e) {
+  //   const { name, value } = e.target;
+  //   setFormValues({ ...formValues, [name]: value });
+  //   console.log(formValues);
+  // }
   function handleSubmit(e) {
-    e.preventDefault();
-    setFormErrors(validate(formValues));
-    setIsSubmit(true);
+    // e.preventDefault();
+    // setFormErrors(validate(formValues));
+    // setIsSubmit(true);
   }
 
-  function validate(values) {
-    const errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-
-    if (!values.mail) {
-      errors.mail = "Email is required";
-    } else if (!regex.test(values.mail)) {
-      errors.mail = "This is not a valid format. Please try again.";
+  const formValidation = () => {
+    if (mail === "" || password === "") {
+      return true
+    } else {
+      return false
     }
-
-    if (!values.password) {
-      errors.password = "Password is required";
-    } else if (values.password.length < 4) {
-      errors.password = "Password is too short.";
-    } else if (values.password.length > 10) {
-      errors.password = "Password is too long.";
-    }
-
-    return errors;
   }
+
+  // function validate() {
+  //   const errors = {};
+  //   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+  //   if (!values.mail) {
+  //     errors.mail = "Email is required";
+  //   } else if (!regex.test(values.mail)) {
+  //     errors.mail = "This is not a valid format. Please try again.";
+  //   }
+
+  //   if (!values.password) {
+  //     errors.password = "Password is required";
+  //   } else if (values.password.length < 4) {
+  //     errors.password = "Password is too short.";
+  //   } else if (values.password.length > 10) {
+  //     errors.password = "Password is too long.";
+  //   }
+
+  //   return errors;
+  // }
 
   return (
     <div className="loginPage">
@@ -61,8 +78,8 @@ export default function Login() {
         <form className="loginPassAndMail" onSubmit={handleSubmit}>
           <input
             className="loginInputs"
-            onChange={handleChange}
-            value={formValues.mail}
+            onChange={ e => setMail(e.target.value) }
+            value={mail}
             placeholder="Your e-mail adress"
             type="text"
             name="mail"
@@ -71,15 +88,15 @@ export default function Login() {
           <p>{formErrors.mail}</p>
           <input
             className="loginInputs"
-            onChange={handleChange}
+            onChange={ e => setPassword(e.target.value) }
             placeholder="Your password"
             type="password"
-            value={formValues.password}
+            value={password}
             name="password"
             required
           ></input>
           <p>{formErrors.password}</p>
-          <Button />
+          <button type="submit" disabled={disabled} >Login</button>
         </form>
       </div>
     </div>
