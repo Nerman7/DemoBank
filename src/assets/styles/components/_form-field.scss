@@ -1,0 +1,21 @@
+.form-field {
+  position: relative;
+
+  @extend %floatingLabel;
+
+  input {
+    @extend %lnsInput;
+  }
+
+  .form-error {
+    position: absolute;
+    bottom: -20px;
+    left: 16px;
+  }
+
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label {
+    top: 7px;
+    font-size: rem(13px);
+  }
+}

@@ -8,4 +8,14 @@
   border: none;
   color: #FFFFFF;
   font-size: 14px;
+  margin-top: 20px;
+  font-family: 'axiforma-bold';
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "axiforma-bold";
+  src: local("axiforma-bold"),
+    url("../../assets/fonts/axiforma/axiforma-bold.otf") format("truetype");
+  font-weight: bold;
 }

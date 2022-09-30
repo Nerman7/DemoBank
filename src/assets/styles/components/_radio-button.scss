@@ -1,0 +1,31 @@
+.radio {
+  color: $text-primary;
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: -10px;
+  cursor: pointer;
+  width: 90px;
+
+  &__input {
+    margin-right: rem(16);
+    display: flex;
+
+    input {
+      opacity: 0;
+      width: 12px;
+      height: 12px;
+      &:checked + .radio__control {
+        background: radial-gradient($primary 45%, $white 51%);
+        border-color: $primary;
+      }
+    }
+  }
+
+  &__control {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid $radio-gray-border;
+  }
+}

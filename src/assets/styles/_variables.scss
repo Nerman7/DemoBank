@@ -1,0 +1,56 @@
+//Colors
+$primary: #005b9f;
+$primary-light: #abccff;
+$primary-light50: #8bb5f6;
+$secondary: #f6f7fc;
+$accent: #6cba41;
+$green: #4cd964;
+$white: #ffffff;
+$black: #000000;
+$warn: #ff6161;
+$light-gray: #ebebeb;
+$light-gray50: #e1e4f5;
+$light-gray60: #d2d5e0;
+$gray: #6d6a6a;
+$gray-50: #ccc;
+$darkblue: #085391;
+$darkblue2: #223063;
+$gold: #bb8e56;
+$gold-light: #d4ad67;
+$blue-primary: #1c64d2;
+
+//Text colors
+$text-primary: #000000;
+$text-gray: #949494;
+$text-lightGray: #b1b1b1;
+$text-white: #ffffff;
+
+//Shadow colors
+$primary-shadow: #005b9f70;
+$primary-shadow50: #005b9f1a;
+$primary-shadow100: #005b9f1f;
+$warn-shadow: #ff616170;
+$black-shadow: #00000066;
+$dark-shadow: #22306329;
+$darkblue-shadow: #22306366;
+$modal-shadow: #00000045;
+$charges-shadow: #00000029;
+$gold-shadow: #bb8e5670;
+$blue-shadow: #1c64d270;
+
+//Border colors
+$border-lightGray: #dadff9;
+$input-border: #22306333;
+$radio-gray-border: #707070;
+
+//Gradients
+$inputGradient: linear-gradient(
+  180deg,
+  $white 0%,
+  $light-gray50 99%,
+  $light-gray50 100%
+);
+
+$font-size: 16px;
+$sidenav-width: 300px;
+$scrollbar-size: 8px;

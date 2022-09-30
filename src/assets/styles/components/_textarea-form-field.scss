@@ -1,0 +1,22 @@
+.textarea-form-field {
+  position: relative;
+
+  @extend %floatingLabel;
+
+  label {
+    top: 20px;
+  }
+
+  textarea {
+    @extend %lnsInput;
+    resize: vertical;
+    height: 300px;
+    padding-top: 30px;
+  }
+
+  textarea:focus ~ label,
+  textarea:not(:placeholder-shown) ~ label {
+    top: 7px;
+    font-size: rem(13px);
+  }
+}

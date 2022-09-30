@@ -1,0 +1,16 @@
+.date-form-field {
+  position: relative;
+  background-image: $inputGradient;
+
+  @extend %floatingLabel;
+
+  input {
+    @extend %lnsDate;
+  }
+
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label {
+    top: 7px;
+    font-size: rem(13px);
+  }
+}

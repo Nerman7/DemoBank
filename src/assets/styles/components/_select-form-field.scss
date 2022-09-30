@@ -1,0 +1,22 @@
+.select-form-field {
+  position: relative;
+  background-image: $inputGradient;
+  @extend %lnsInput;
+
+  select {
+    @extend %lnsSelect;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/shared/dropdown.svg');
+  }
+
+  @extend %floatingLabel;
+
+  select:focus ~ label,
+  select:not([value='']):valid ~ label {
+    top: 7px;
+    font-size: rem(13px);
+  }
+}

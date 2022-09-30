@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: block; transform: scale(-1,1)" width="352" height="374.416" viewBox="0 0 352 374.416">
+  <defs>
+    <filter id="img_dropdown" x="0" y="0" width="352" height="374.416" filterUnits="userSpaceOnUse">
+      <feOffset dx="4.357" dy="6.709" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feFlood flood-opacity="0.271"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#img_dropdown)">
+    <path id="img_dropdown-2" data-name="img_dropdown" d="M14315,38.418a8,8,0,0,1-8-8v-286a8,8,0,0,1,8-8h14.154a13.4,13.4,0,0,0,6.488-3.632l9.973-10.068a12.462,12.462,0,0,1,17.75,0l9.969,10.068a13.417,13.417,0,0,0,6.49,3.632H14596a8,8,0,0,1,8,8v286a8,8,0,0,1-8,8Z" transform="translate(-14283.86 301.79)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+  </g>
+</svg>
