@@ -12,8 +12,14 @@ export default function Login() {
   const [password, setPassword] = useState('')
 
   const [disabled, setDisabled] = useState(true)
+  
+  const firstRender = useRef(true)
 
   useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false  // it's no longer the first render
+      return // skip the code below
+    }
     setDisabled(formValidation())
   }, [mail, password]) 
 
