@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect, useRef  } from "react";
+import { useState, useEffect, useRef } from "react";
 import leonus from "../../assets/resources/img_leonus_logo.svg";
 import "./login.css";
 import Button from "../../components/login/Button";
@@ -8,38 +8,29 @@ import "../../assets/fonts/axiforma/axiforma-bold.otf";
 import "../../assets/fonts/axiforma/axiforma-regular.otf";
 
 export default function Login() {
-  const [mail, setMail] = useState('')
-  const [password, setPassword] = useState('')
-
-  const [disabled, setDisabled] = useState(true)
+  const [mail, setMail] = useState("");
+  const [password, setPassword] = useState("");
+  const [disabled, setDisabled] = useState(true);
+  const firstRender = useRef(true);
+  const [nameError, setNameError] = useState(null);
 
   useEffect(() => {
-    setDisabled(formValidation())
-  }, [mail, password]) 
-
-
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
-
-  // function handleChange(e) {
-  //   const { name, value } = e.target;
-  //   setFormValues({ ...formValues, [name]: value });
-  //   console.log(formValues);
-  // }
-  function handleSubmit(e) {
-    // e.preventDefault();
-    // setFormErrors(validate(formValues));
-    // setIsSubmit(true);
-  }
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
+    setDisabled(formValidation());
+  }, [mail, password]);
 
   const formValidation = () => {
     if (mail === "" || password === "") {
-      return true
+      setNameError("Mail or password cant be blank!");
+      return true;
     } else {
-      return false
+      setNameError(null);
+      return false;
     }
-  }
-
+  };
 
   return (
     <div className="loginPage">
@@ -47,42 +38,37 @@ export default function Login() {
         <source src={bacgroundVideo} type="video/mp4"></source>
       </video>
       <div className="centerPage">
-        {(Object.keys(formErrors).length === 0) & isSubmit ? (
+        {/* {(mail && password) ? (
           <h1>Signed in!</h1>
         ) : (
           <div></div>
-        )}
+        )}  */}
         <img className="logoImg" src={leonus} alt="Please wait"></img>
         <h1 className="mainTitle">Welcome</h1>
         <h3 className="credentials">Please enter your credentials to login.</h3>
-        <form className="loginPassAndMail" onSubmit={handleSubmit}>
+        <form className="loginPassAndMail">
           <input
             className="loginInputs"
-            onChange={ e => setMail(e.target.value) }
+            onChange={(e) => setMail(e.target.value)}
             value={mail}
             placeholder="Your e-mail adress"
             type="text"
             name="mail"
             required
           ></input>
-          <p>{formErrors.mail}</p>
+          {nameError && <p>{nameError}</p>}
           <input
             className="loginInputs"
-            onChange={ e => setPassword(e.target.value) }
+            onChange={(e) => setPassword(e.target.value)}
             placeholder="Your password"
             type="password"
             value={password}
             name="password"
             required
           ></input>
-          <p>{formErrors.password}</p>
-
-          <Button 
-            color='#1c64d2'
-           buttonStyle='btnLoginBlue'>Log in</Button>
-         
-          
-
+          <Button type="submit" disabled={disabled}>
+            Login
+          </Button>
         </form>
       </div>
     </div>
