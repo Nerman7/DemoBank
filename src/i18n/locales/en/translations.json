@@ -1,0 +1,8 @@
+{
+  "welcome": "Welcome",
+  "credentials": "Please enter your credentials to login.",
+  "email": "Your e-mail adress",
+  "password": "Your password",
+  "button": "Login",
+  "error": "Mail or password cant be blank!"
+}

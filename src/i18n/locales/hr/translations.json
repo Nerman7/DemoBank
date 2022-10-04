@@ -1,0 +1,8 @@
+{
+  "welcome": "Dobrodošli",
+  "credentials": "Unesite svoje podatke za prijavu.",
+  "email": "Unesite vašu email adresu",
+  "password": "Unesite vašu šifru",
+  "button": "Prijavi se",
+  "error": "Mail ili lozinka ne mogu biti prazni!"
+}
