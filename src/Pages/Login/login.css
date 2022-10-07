@@ -31,7 +31,6 @@
   width: 100%;
   height: 60px;
   display: block;
-  margin-top: 40px;
   border-radius: 5px;
   border-width: 1px;
   border-color: #22306333;
@@ -66,4 +65,13 @@
   font-family: "axiforma-regular";
   font-size: 15px;
   margin: 0;
+  margin-bottom: 40px;
+}
+
+.divErrorMessage {
+  height: 50px;
+  display: flex;
+  color: #cc0000;
+  font-family: "axiforma-regular";
+  justify-content: center;
 }

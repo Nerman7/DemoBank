@@ -15,6 +15,8 @@ export default function Login() {
   const [disabled, setDisabled] = useState(true);
   const firstRender = useRef(true);
   const [nameError, setNameError] = useState(null);
+  const [word, setWord] = useState('Prijavi se');
+
 
   useEffect(() => {
     if (firstRender.current) {
@@ -33,7 +35,7 @@ export default function Login() {
       return false;
     }
   };
-
+ 
   return (
     <div className="loginPage">
       <video autoPlay loop muted playsInline width={100} className="myVideo">
@@ -58,7 +60,7 @@ export default function Login() {
             name="mail"
             required
           ></input>
-          {nameError && <p>{t("error")}</p>}
+          <div className="divErrorMessage"> {nameError && <p>{t("error")}</p>}</div>
           <input
             className="loginInputs"
             onChange={(e) => setPassword(e.target.value)}
@@ -68,8 +70,13 @@ export default function Login() {
             name="password"
             required
           ></input>
-          <Button type="submit" disabled={disabled}>
-            {t("button")}
+
+          <Button 
+          textButton={word}
+          buttonColor=''
+          buttonArow={true}
+          type="submit" 
+          disabled={disabled}>
           </Button>
         </form>
       </div>
