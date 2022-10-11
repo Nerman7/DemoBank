@@ -19,17 +19,3 @@
     url("../../assets/fonts/axiforma/axiforma-bold.otf") format("truetype");
   font-weight: bold;
 }
-.btnLoginOpa {
-  background: #1c64d2 0% 0% no-repeat padding-box;
-  box-shadow: 0px 10px 25px #1c64d270;
-  border-radius: 40px;
-  opacity: 0.5;
-  height: 60px;
-  width: 200px;
-  border: none;
-  color: #FFFFFF;
-  font-size: 14px;
-  margin-top: 20px;
-  font-family: 'axiforma-bold';
-  cursor: pointer;
-}

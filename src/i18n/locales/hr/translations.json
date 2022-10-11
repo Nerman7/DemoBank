@@ -1,8 +1,8 @@
 {
-  "welcome": "Dobrodošli",
-  "credentials": "Unesite svoje podatke za prijavu.",
-  "email": "Unesite vašu email adresu",
-  "password": "Unesite vašu šifru",
-  "button": "Prijavi se",
-  "error": "Mail ili lozinka ne mogu biti prazni!"
+  "login_welcome_title": "Dobrodošli",
+  "login_credentials_text": "Unesite svoje podatke za prijavu.",
+  "login_email_placeholder_text": "Unesite vašu email adresu",
+  "login_password_placeholder_text": "Unesite vašu šifru",
+  "login_button_title": "Prijavi se",
+  "login_error_text": "Mail ili lozinka ne mogu biti prazni!"
 }

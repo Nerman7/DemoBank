@@ -1,8 +1,8 @@
 {
-  "welcome": "Welcome",
-  "credentials": "Please enter your credentials to login.",
-  "email": "Your e-mail adress",
-  "password": "Your password",
-  "button": "Login",
-  "error": "Mail or password cant be blank!"
+  "login_welcome_title": "Welcome",
+  "login_credentials_text": "Please enter your credentials to login.",
+  "login_email_placeholder_text": "Your e-mail adress",
+  "login_password_placeholder_text": "Your password",
+  "login_button_title": "Login",
+  "login_error_text": "Mail or password cant be blank!"
 }
